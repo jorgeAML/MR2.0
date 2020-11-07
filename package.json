@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "MR2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "jorgeAML",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "expect.js": "^0.3.1",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.0"
+  }
+}
