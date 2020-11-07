@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const path = require('path');
 const morgan = require('morgan');
+const info = require('./global_objects/globalOne').info;
 
 let app = express();
 //using Morgan
@@ -19,4 +20,5 @@ app.all('*', (req, res) => {
 
 http.createServer(app).listen(app.get('port'), () => {
     console.log(`Express server is listening on port ${app.get('port')}`);
+    
 });
