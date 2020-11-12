@@ -6,7 +6,14 @@ const info = require('./global_objects/globalOne').info;
 
 let app = express();
 //using Morgan
-app.use(morgan('combined'));
+const typeMorgan = [
+    {combine: "combined"},
+    {common: "common"},
+    {dev: "dev"},
+    {short: "short"},
+    {tiny: "tiny"}
+]
+app.use(morgan(typeMorgan[2].dev));
 //Setting the name of the project
 app.set('appName', 'Medicina Resources 2021');
 
