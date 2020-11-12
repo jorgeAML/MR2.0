@@ -13,7 +13,8 @@ app.set('appName', 'Medicina Resources 2021');
 app.set('port', process.env.PORT || 1704);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
+//include files
+app.use(express.static(path.join(__dirname, 'public')));
 app.all('*', (req, res) => {
     res.render('index', {msg:'Welcome to Medicina Resources'});
 });
